@@ -12,9 +12,9 @@
         <li><a href="#Requirements">Requirements</a></li>
       </ul>
     </li>
-    <li><a href="#Test-Scenarios">Test Scenarios</a>
+    <li><a href="#Test-scenario">Test scenario</a>
       <ul>
-        <li><a href="#1.Test">1.Test</a></li>
+        <li><a href="#Zakup produktu">Zakup produktu</a></li>
         <li><a href="#2.Test">2.Test</a></li>
       </ul>
     </li>
@@ -45,12 +45,194 @@ Python, pytest, Selenium, PyCharm
 </ul>
 
 
-## Test Scenarios:
+## Test scenario
 
-### 1. Test
+### Zakup produktu
+<details>
+  <summary>Wyszukanie produktu</summary>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <td>Wyszukanie produktu</td>
+  </tr>
+  <tr>
+    <th>Opis czynności</th>
+    <td>
+      ...
+    </td>
+  </tr>
+  <tr>
+    <th>Warunki wstępne</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Dane testowe</th>
+    <td>Nazwa produktu: "Rival Field Messenger"</td>
+  </tr>
+  <tr>
+    <th>Priorytet</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Oczekiwany rezultat</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Komentarz</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Tester</th>
+    <td></td>
+  </tr>
+</table>
+</details>
+
+
+<details>
+  <summary>Zakup produktu</summary>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <td>Zakup produktu</td>
+  </tr>
+  <tr>
+    <th>Opis czynności</th>
+    <td>
+      ...
+    </td>
+  </tr>
+  <tr>
+    <th>Warunki wstępne</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Dane testowe</th>
+    <td>Nazwa produktu: "Driven Backpack"</td>
+  </tr>
+  <tr>
+    <th>Priorytet</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Oczekiwany rezultat</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Komentarz</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Tester</th>
+    <td></td>
+  </tr>
+</table>
+</details>
+
+
+<details>
+  <summary>Zakup produktu ze zniżką</summary>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <td>Zakup produktu ze zniżką</td>
+  </tr>
+  <tr>
+    <th>Opis czynności</th>
+    <td>
+      ...
+    </td>
+  </tr>
+  <tr>
+    <th>Warunki wstępne</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Dane testowe</th>
+    <td>
+      ... dane użytkownika
+      Kod promocyjny: "20poff"<br>
+    </td>
+  </tr>
+  <tr>
+    <th>Priorytet</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Oczekiwany rezultat</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Komentarz</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Tester</th>
+    <td></td>
+  </tr>
+</table>
+</details>
+
 
 ### 2. Test
+<details>
+  <summary>Contents</summary>
+
+</details>
+<table>
+  <tr>
+    <th>Nazwa</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Opis czynności</th>
+    <td>
+Włożenie karty<br>
+Podaj PIN<br>
+Klawisz 1<br>
+Klawisz 2<br>
+Klawisz 3<br>
+Klawisz 4<br>
+Klawisz POTWIERDŹ<br>
+Klawisz Prawy 1<br>
+Wybierz kwotę<br>
+Klawisz Prawy 3<br>
+Wypłać 1000<br>
+Czy chcesz wydruk?<br>
+Klawisz Lewy 1<br>
+Wydanie karty<br>
+Karta odebrana<br>
+Wydanie pieniędzy – 1000<br>
+Pieniądze odebrane<br>
+Wydruk<br>
+    </td>
+  </tr>
+  <tr>
+    <th>Warunki wstępne</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Dane testowe</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Priorytet</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Oczekiwany rezultat</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Komentarz</th>
+    <td></td>
+  </tr>
+  <tr>
+    <th>Tester</th>
+    <td></td>
+  </tr>
+</table>
 
 
-## Results:
+## Results
 
