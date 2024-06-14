@@ -10,24 +10,24 @@
         <li><a href="#Objective">Objective</a></li>
         <li><a href="#Used-technology">Used technology</a></li>
         <li><a href="#Requirements">Requirements</a></li>
+        <li><a href="#Test-environment">Test environment</a></li>
       </ul>
     </li>
     <li><a href="#Test-scenario">Test scenario</a>
       <ul>
         <li><a href="#Zakup-produktu">Zakup produktu</a></li>
-        <li><a href="#2.Test">2.Test</a></li>
+        <li><a href="#Rejestracja-i-logowanie">Rejestracja i logowanie</a></li>
       </ul>
     </li>
-    <li><a href="#Results">Results</a></li>
   </ol>
 </details>
 
 ## About project
-Kod pozwala przetestować przygotowane scenariusze...
+Kod pozwala przetestować przygotowane scenariusze zakupu produktu oraz logowania do konta.
 
 
 ### Objective:
-Przetestowanie ... na stronie e-commerce "[Luma](https://magento.softwaretestingboard.com/)".
+Przetestowanie funkcji zakupu produktu i logowania na stronie e-commerce "[Luma](https://magento.softwaretestingboard.com/)".
 
 
 ### Used technology:
@@ -43,6 +43,28 @@ Python, pytest, Selenium, PyCharm
     <li>selenium (v. 4.21.0)</li>
   </ul>
 </ul>
+
+
+### Test environment:
+<ul>
+  <li>
+    PyCharm 2024.1.2 (Community Edition) <br>
+    Build #PC-241.17011.127, built on May 28, 2024 <br>
+    Runtime version: 17.0.11+1-b1207.24 amd64 <br>
+    VM: OpenJDK 64-Bit Server VM by JetBrains s.r.o. <br>
+    Windows 10.0 <br>
+    GC: G1 Young Generation, G1 Old Generation <br>
+    Memory: 2048M <br>
+    Cores: 12 <br>
+  </li>
+  <li>
+    Chrome
+  </li>
+  <li>
+    <a href="https://magento.softwaretestingboard.com/">Luma</a> - demo sklep, sesje resetowane co niedzielę 
+  </li>
+</ul>
+ 
 
 
 ## Test scenario
@@ -217,9 +239,9 @@ Python, pytest, Selenium, PyCharm
 </details>
 
 
-### 2. Test
+### Rejestracja i logowanie
 <details>
-  <summary>Contents</summary>
+  <summary>Rejestracja istniejącego konta</summary>
 
 </details>
 <table>
@@ -277,5 +299,13 @@ Wydruk<br>
 </table>
 
 
-## Results
+<details>
+  <summary>Logowanie</summary>
 
+</details>
+
+
+<details>
+  <summary>Logowanie z błędnym hasłem</summary>
+
+</details>
