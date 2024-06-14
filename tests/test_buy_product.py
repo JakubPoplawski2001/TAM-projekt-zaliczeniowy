@@ -25,22 +25,6 @@ def product_page(setup_and_close):
     driver.get("https://magento.softwaretestingboard.com/rival-field-messenger.html")
     yield
 
-
-def test_search_for_product(setup_and_close):
-    product_name = "Rival Field Messenger"
-
-    # Search bar
-    search_form = driver.find_element(By.NAME, "q")
-    search_form.send_keys(product_name)
-    search_form.submit()
-
-    # Product card
-    driver.find_element(By.LINK_TEXT, product_name).click()
-    # Product page
-    title = driver.find_element(By.XPATH, '//*[@id="maincontent"]/div[2]/div/div[1]/div[1]/h1/span').text
-
-    assert  title == product_name
-
 def fill_user_credentials(email, f_name, l_name, street, city, zip_code, country, phone):
     # Wait until form is loaded
     wait = WebDriverWait(driver, timeout=5)
@@ -59,6 +43,22 @@ def fill_user_credentials(email, f_name, l_name, street, city, zip_code, country
     driver.find_element(By.NAME, "postcode").send_keys(zip_code)
     driver.find_element(By.NAME, "street[0]").send_keys(street)
     time.sleep(delay)
+
+
+def test_search_for_product(setup_and_close):
+    product_name = "Rival Field Messenger"
+
+    # Search bar
+    search_form = driver.find_element(By.NAME, "q")
+    search_form.send_keys(product_name)
+    search_form.submit()
+
+    # Product card
+    driver.find_element(By.LINK_TEXT, product_name).click()
+    # Product page
+    title = driver.find_element(By.XPATH, '//*[@id="maincontent"]/div[2]/div/div[1]/div[1]/h1/span').text
+
+    assert  title == product_name
 
 def test_buy_product(product_page):
     # User credentials
@@ -88,6 +88,77 @@ def test_buy_product(product_page):
 
     # Next btn
     driver.find_element(By.XPATH, '//*[@id="shipping-method-buttons-container"]/div/button').click()
+    time.sleep(delay)
+
+    # Place Order btn
+    driver.find_element(
+        By.XPATH,
+        '//*[@id="checkout-payment-method-load"]/div/div/div[2]/div[2]/div[4]/div/button'
+    ).click()
+
+    # Wait until order label is loaded
+    order_label = wait.until(EC.presence_of_element_located((
+        By.XPATH,
+        '//*[@id="maincontent"]/div[3]/div/div[2]/p[1]/span'
+    )))
+
+    # Order number
+    assert order_label.is_displayed()
+
+def test_buy_product_with_discount_code(product_page):
+    # User credentials
+    email = "user@email.not"
+    f_name = "User"
+    l_name = "Name"
+    street = "Street"
+    city = "City"
+    zip_code = "12-345"
+    country = "PL"
+    phone = "123456789"
+    discount_code = "20poff"
+
+    # Add to Cart btn
+    driver.find_element(By.ID, "product-addtocart-button").click()
+
+    # Wait until success alert is shown
+    wait = WebDriverWait(driver, timeout=5)
+    wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="maincontent"]/div[1]/div[2]/div/div')))
+    time.sleep(0.5)
+
+    # Cart btn
+    driver.find_element(By.XPATH, '/html/body/div[2]/header/div[2]/div[1]/a').click()
+    # Proceed to Checkout
+    driver.find_element(By.ID, "top-cart-btn-checkout").click()
+
+    fill_user_credentials(email, f_name, l_name, street, city, zip_code, country, phone)
+
+    # Next btn
+    driver.find_element(By.XPATH, '//*[@id="shipping-method-buttons-container"]/div/button').click()
+    time.sleep(delay)
+
+    # Apply Discount Code toggle
+    driver.find_element(By.ID, "block-discount-heading").click()
+    # Discount code field
+    discount_field = driver.find_element(By.NAME, "discount_code")
+    discount_field.send_keys(discount_code)
+    # discount_field.submit()
+
+    # Apply Discount btn
+    driver.find_element(By.XPATH, '//*[@id="discount-form"]/div[2]/div/button').click()
+    time.sleep(delay)
+
+    # Check prices
+    product_price = float(driver.find_element(
+        By.XPATH,
+        '//*[@id="opc-sidebar"]/div[1]/table/tbody/tr[1]/td/span'
+    ).text.strip('$'))
+    assert product_price == 45.00
+
+    discount_amount = float(driver.find_element(
+        By.XPATH,
+        '//*[@id="opc-sidebar"]/div[1]/table/tbody/tr[2]/td/span'
+    ).text.strip('-$'))
+    assert discount_amount == 9.00
     time.sleep(delay)
 
     # Place Order btn

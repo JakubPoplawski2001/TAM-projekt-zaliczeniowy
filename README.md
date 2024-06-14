@@ -23,7 +23,7 @@
 </details>
 
 ## About project
-Kod pozwala przetestować przygotowane scenariusze
+Kod pozwala przetestować przygotowane scenariusze...
 
 
 ### Objective:
@@ -85,7 +85,7 @@ Python, pytest, Selenium, PyCharm
   </tr>
   <tr>
     <th>Tester</th>
-    <td></td>
+    <td>Jakub</td>
   </tr>
 </table>
 </details>
@@ -143,7 +143,7 @@ Python, pytest, Selenium, PyCharm
   </tr>
   <tr>
     <th>Tester</th>
-    <td></td>
+    <td>Jakub</td>
   </tr>
 </table>
 </details>
@@ -159,35 +159,59 @@ Python, pytest, Selenium, PyCharm
   <tr>
     <th>Opis czynności</th>
     <td>
-      ...
+      Kiknięcie w przycisk "Add to Cart" <br>
+      Kliknięcie w ikonę koszyka <br>
+      Klinięcie w przycisk "Proceed to Checkout" <br>
+      Uzupełnienie pól: email, first name, last name, telephone poprawnymi danymi <br>
+      Wybranie z listy country: Poland <br>
+      Wybranie z listy region pierwszej poprawnej opcji <br>
+      Uzupełnienie pól: city, postcode, street poprawnymi danymi <br>
+      Kliknięcie w przycisk "Next" <br>
+      Rozwinięcie opcji dodania rabatu <br>
+      Wpisanie rabatu <br>
+      Kliknięcię przycisku "Apply Discount" <br>
+      Kliknięcie w przycisk "Place Order" <br>
     </td>
   </tr>
   <tr>
     <th>Warunki wstępne</th>
-    <td></td>
+    <td>
+      Na stronie produktu: https://magento.softwaretestingboard.com/rival-field-messenger.html <br>
+      Włączony kod promocyjny
+    </td>
   </tr>
   <tr>
     <th>Dane testowe</th>
     <td>
-      ... dane użytkownika
-      Kod promocyjny: "20poff"<br>
+      email = "user@email.not" <br>
+      f_name = "User" <br>
+      l_name = "Name" <br>
+      street = "Street" <br>
+      city = "City" <br>
+      zip_code = "12-345" <br>
+      country = "PL" <br>
+      phone = "123456789" <br>
+      discount_code = "20poff"
     </td>
   </tr>
   <tr>
     <th>Priorytet</th>
-    <td></td>
+    <td>Ważny</td>
   </tr>
   <tr>
     <th>Oczekiwany rezultat</th>
-    <td></td>
+    <td>
+      Po zatwierdzeniu kodu promocyjnego, koszt powinnien zostać obniżony o 20% ceny produktu <br>
+      Pojawi się informacja o zakupie produktu oraz numer zamówienia
+    </td>
   </tr>
   <tr>
     <th>Komentarz</th>
-    <td></td>
+    <td>Test zakończony pomyślnie. Czas oczekiwania na załadowanie się pewnych elementów może się zmieniać.</td>
   </tr>
   <tr>
     <th>Tester</th>
-    <td></td>
+    <td>Jakub</td>
   </tr>
 </table>
 </details>
