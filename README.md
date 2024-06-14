@@ -14,7 +14,7 @@
     </li>
     <li><a href="#Test-scenario">Test scenario</a>
       <ul>
-        <li><a href="#Zakup produktu">Zakup produktu</a></li>
+        <li><a href="#Zakup-produktu">Zakup produktu</a></li>
         <li><a href="#2.Test">2.Test</a></li>
       </ul>
     </li>
