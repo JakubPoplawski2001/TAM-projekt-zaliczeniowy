@@ -58,12 +58,14 @@ Python, pytest, Selenium, PyCharm
   <tr>
     <th>Opis czynności</th>
     <td>
-      ...
+      Wprowadzenie nazwy produktu do paska wyszkiwania <br>
+      Zatwierdzenie wyszukiwania <br>
+      Kliknięcie w nazwę na karcie produktu <br>
     </td>
   </tr>
   <tr>
     <th>Warunki wstępne</th>
-    <td></td>
+    <td>Na stronie sklepu: https://magento.softwaretestingboard.com/ </td>
   </tr>
   <tr>
     <th>Dane testowe</th>
@@ -71,15 +73,15 @@ Python, pytest, Selenium, PyCharm
   </tr>
   <tr>
     <th>Priorytet</th>
-    <td></td>
+    <td>Ważny</td>
   </tr>
   <tr>
     <th>Oczekiwany rezultat</th>
-    <td></td>
+    <td>Strona produktu z nazwą produktu w tytule</td>
   </tr>
   <tr>
     <th>Komentarz</th>
-    <td></td>
+    <td>Test zakończony pomyślnie.</td>
   </tr>
   <tr>
     <th>Tester</th>
@@ -99,28 +101,45 @@ Python, pytest, Selenium, PyCharm
   <tr>
     <th>Opis czynności</th>
     <td>
-      ...
+      Kiknięcie w przycisk "Add to Cart" <br>
+      Kliknięcie w ikonę koszyka <br>
+      Klinięcie w przycisk "Proceed to Checkout" <br>
+      Uzupełnienie pól: email, first name, last name, telephone poprawnymi danymi <br>
+      Wybranie z listy country: Poland <br>
+      Wybranie z listy region pierwszej poprawnej opcji <br>
+      Uzupełnienie pól: city, postcode, street poprawnymi danymi <br>
+      Kliknięcie w przycisk "Next" <br>
+      Kliknięcie w przycisk "Place Order"
     </td>
   </tr>
   <tr>
     <th>Warunki wstępne</th>
-    <td></td>
+    <td>Na stronie produktu: https://magento.softwaretestingboard.com/rival-field-messenger.html </td>
   </tr>
   <tr>
     <th>Dane testowe</th>
-    <td>Nazwa produktu: "Driven Backpack"</td>
+    <td>
+      email = "user@email.not" <br>
+      f_name = "User" <br>
+      l_name = "Name" <br>
+      street = "Street" <br>
+      city = "City" <br>
+      zip_code = "12-345" <br>
+      country = "PL" <br>
+      phone = "123456789"
+    </td>
   </tr>
   <tr>
     <th>Priorytet</th>
-    <td></td>
+    <td>Ważny</td>
   </tr>
   <tr>
     <th>Oczekiwany rezultat</th>
-    <td></td>
+    <td>Pojawi się informacja o zakupie produktu oraz numer zamówienia</td>
   </tr>
   <tr>
     <th>Komentarz</th>
-    <td></td>
+    <td>Test zakończony pomyślnie. Czas oczekiwania na załadowanie się pewnych elementów może się zmieniać.</td>
   </tr>
   <tr>
     <th>Tester</th>
