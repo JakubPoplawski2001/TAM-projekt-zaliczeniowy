@@ -229,7 +229,10 @@ Python, pytest, Selenium, PyCharm
   </tr>
   <tr>
     <th>Komentarz</th>
-    <td>Test zakończony pomyślnie. Czas oczekiwania na załadowanie się pewnych elementów może się zmieniać.</td>
+    <td>
+      Test zakończony pomyślnie. 
+      Czas oczekiwania na załadowanie się pewnych elementów może się zmieniać.
+    </td>
   </tr>
   <tr>
     <th>Tester</th>
@@ -242,70 +245,165 @@ Python, pytest, Selenium, PyCharm
 ### Rejestracja i logowanie
 <details>
   <summary>Rejestracja istniejącego konta</summary>
-
-</details>
-<table>
+  <table>
   <tr>
     <th>Nazwa</th>
-    <td></td>
+    <td>Rejestracja isniejącego konta użytkownika</td>
   </tr>
   <tr>
     <th>Opis czynności</th>
     <td>
-Włożenie karty<br>
-Podaj PIN<br>
-Klawisz 1<br>
-Klawisz 2<br>
-Klawisz 3<br>
-Klawisz 4<br>
-Klawisz POTWIERDŹ<br>
-Klawisz Prawy 1<br>
-Wybierz kwotę<br>
-Klawisz Prawy 3<br>
-Wypłać 1000<br>
-Czy chcesz wydruk?<br>
-Klawisz Lewy 1<br>
-Wydanie karty<br>
-Karta odebrana<br>
-Wydanie pieniędzy – 1000<br>
-Pieniądze odebrane<br>
-Wydruk<br>
+      Kliknięcie przycisku "Create an Account" <br>
+      Uzupełnienie pól: first name, last name, email, password, password confirmation <br>
+      Kliknięcie w przycisk "Create Account" 
     </td>
   </tr>
   <tr>
     <th>Warunki wstępne</th>
-    <td></td>
+    <td>
+      Na stronie produktu: https://magento.softwaretestingboard.com/rival-field-messenger.html <br>
+      Utworzone konto na dane testowe
+    </td>
   </tr>
   <tr>
     <th>Dane testowe</th>
-    <td></td>
+    <td>
+      email = "user@email.not" <br>
+      f_name = "User" <br>
+      l_name = "Name" <br>
+      password = "Password1234"
+    </td>
   </tr>
   <tr>
     <th>Priorytet</th>
-    <td></td>
+    <td>Ważny</td>
   </tr>
   <tr>
     <th>Oczekiwany rezultat</th>
-    <td></td>
+    <td>
+      Po próbie stworzenia konta na zarejestowane już dane, 
+      powinien pojawić się komunikat o istniejącym już koncie
+    </td>
   </tr>
   <tr>
     <th>Komentarz</th>
-    <td></td>
+    <td>
+      Test zakończony pomyślnie. <br>
+      Przez charakter środowiska demo, pierwsze uruchomienie testu po resecie strony (co niedzielę), 
+      może zakończyć się niepowodzeniem. W takim wypadku należy ponownie uruchomić test.
+    </td>
   </tr>
   <tr>
     <th>Tester</th>
-    <td></td>
+    <td>Jakub</td>
   </tr>
-</table>
+  </table>
+</details>
+
 
 
 <details>
   <summary>Logowanie</summary>
-
+  <table>
+  <tr>
+    <th>Nazwa</th>
+    <td>Logowanie do konta użytkownika</td>
+  </tr>
+  <tr>
+    <th>Opis czynności</th>
+    <td>
+      Kliknięcie przycisku "Sign In" <br>
+      Uzupełnienie pól: email, password <br>
+      Kliknięcie w przycisk "Sign In" 
+    </td>
+  </tr>
+  <tr>
+    <th>Warunki wstępne</th>
+    <td>
+      Na stronie produktu: https://magento.softwaretestingboard.com/rival-field-messenger.html <br>
+      Utworzone konto na dane testowe
+    </td>
+  </tr>
+  <tr>
+    <th>Dane testowe</th>
+    <td>
+      email = "user@email.not" <br>
+      password = "Password1234"
+    </td>
+  </tr>
+  <tr>
+    <th>Priorytet</th>
+    <td>Ważny</td>
+  </tr>
+  <tr>
+    <th>Oczekiwany rezultat</th>
+    <td>
+      Po zalogowaniu powinno pokazać się menu użytkownika, 
+      które pozwala przejść na konto użytkownika lub wylogować się.
+    </td>
+  </tr>
+  <tr>
+    <th>Komentarz</th>
+    <td>
+      Test zakończony pomyślnie.
+    </td>
+  </tr>
+  <tr>
+    <th>Tester</th>
+    <td>Jakub</td>
+  </tr>
+  </table>
 </details>
 
 
 <details>
   <summary>Logowanie z błędnym hasłem</summary>
-
+  <table>
+  <tr>
+    <th>Nazwa</th>
+    <td>Logowanie do konta użytkownika z nieprawidłowym hasłem</td>
+  </tr>
+  <tr>
+    <th>Opis czynności</th>
+    <td>
+      Kliknięcie przycisku "Sign In" <br>
+      Uzupełnienie pól: email, password <br>
+      Kliknięcie w przycisk "Sign In" 
+    </td>
+  </tr>
+  <tr>
+    <th>Warunki wstępne</th>
+    <td>
+      Na stronie produktu: https://magento.softwaretestingboard.com/rival-field-messenger.html <br>
+      Utworzone konto na poprawne dane testowe
+    </td>
+  </tr>
+  <tr>
+    <th>Dane testowe</th>
+    <td>
+      email = "user@email.not" <br>
+      invalid_password = "InvalidPassword"
+    </td>
+  </tr>
+  <tr>
+    <th>Priorytet</th>
+    <td>Ważny</td>
+  </tr>
+  <tr>
+    <th>Oczekiwany rezultat</th>
+    <td>
+      Po próbie zalogowania się powinien pokazać się alert informujący o błędnych danych logowania.
+    </td>
+  </tr>
+  <tr>
+    <th>Komentarz</th>
+    <td>
+      Test zakończony pomyślnie.
+    </td>
+  </tr>
+  <tr>
+    <th>Tester</th>
+    <td>Jakub</td>
+  </tr>
+  </table>
 </details>

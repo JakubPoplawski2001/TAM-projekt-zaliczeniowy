@@ -74,14 +74,14 @@ def test_login(setup_and_close):
 def test_login_with_invalid_password(setup_and_close):
     # User credentials
     email = "user@email.not"
-    password = "InvalidPassword"
+    invalid_password = "InvalidPassword"
 
     # Sign In btn
     driver.find_element(By.LINK_TEXT, "Sign In").click()
 
     # Fill user credentials
     driver.find_element(By.NAME, "login[username]").send_keys(email)
-    driver.find_element(By.NAME, "login[password]").send_keys(password)
+    driver.find_element(By.NAME, "login[password]").send_keys(invalid_password)
 
     # Sign In btn
     driver.find_element(By.ID, "send2").click()
